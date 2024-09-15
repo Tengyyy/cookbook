@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700,700i|Open+Sans:300,300i,400,400i&subset=latin-ext");
+
+
+
+body {
+    background-color: #faf0e6;
+}
+
+
+/*HEADER*/
+
+header .header-banner {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+
+header h1 {
+    font-family: "Gentium Basic", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 60px;
+    color: #000;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 5px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 16px 16px;
+}
+
+header nav ul li a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #172029;
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+
+header nav ul li a:hover {
+    font-weight: 700;
+}
+
+header .header-banner hr {
+    color: #4f5663;
+    border-width: 2px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    visibility: hidden;
+}
+
+/* MAIN BODY */
+
+.banner {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.about-us {
+    padding: 30px 20px;
+}
+
+.about-us h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: #172029;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-us div {
+    display: flex;
+}
+
+.about-us img {
+    width: 50%;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.about-us p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #172029;
+}
+
+
+.gallery-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.gallery-image {
+    flex-basis: 300px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.gallery-image img {
+    width: 100%;
+    border-radius: 100%;
+    transition: filter 0.5s ease;
+}
+
+.gallery-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease;
+}
+
+.link-header {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 3px;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 9px #111;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-image:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-image:hover .link-header {
+    opacity: 1;
+}
+
+/*FOOTER*/
+
+footer {
+    padding: 30px 40px;
+    margin-top: 20px;
+    background-color: #172029;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul li {
+    display: block;
+    padding: 0 0 15px 0;
+}
+
+footer ul li p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+footer ul li a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer-sm {
+    width: 45px;
+}
+
+.footer-sm img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* MEDIA */
+
+
+/* PHONE */
+@media only screen and (max-width: 600px) {
+    header .header-banner hr {
+        visibility: visible;
+    }
+
+    .about-us img {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 750px) {
+    .about-us img {
+        display: none;
+    }
+    
+}
+
+
+/* BIGGER SCREENS */
+@media only screen and (min-width: 950px) {
+    
+    header .header-banner {
+        height: 200px;
+    }
+    
+    header h1 a {
+        font-size: 80px;
+    }
+    
+    header h2 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    
+    header nav ul li {
+        padding: 16px 42px;
+    }
+
+    main {
+        padding: 0px 100px;
+    }
+
+    footer {
+        padding: 30px 50px;
+        margin-top: 40px;
+    }
+
+    .about-us {
+        padding: 50px 20px;
+    }
+
+    .about-us h2 {
+        font-size: 35px;
+    }
+
+    .about-us p {
+        font-size: 25px;
+    }
+    
+    .gallery-links {
+        padding: 30px 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    main {
+        padding: 0px 150px;
+    }
+
+    .about-us {
+        padding: 70px 20px;
+    }
+
+
+    .about-us h2 {
+        font-size: 40px;
+    }
+
+    .about-us p {
+        font-size: 30px;
+    }
+
+    .gallery-links {
+        padding: 40px 0;
+    }
+}
